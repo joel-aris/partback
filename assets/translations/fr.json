@@ -1,0 +1,149 @@
+{
+  "app": {
+    "name": "VALIDIKA",
+    "tagline": "Verification des pharmaciens de la RDC"
+  },
+  "nav": {
+    "home": "Accueil",
+    "verify": "Verifier",
+    "pharmacists": "Pharmaciens",
+    "account": "Mon compte",
+    "login": "Connexion"
+  },
+  "common": {
+    "retry": "Reessayer",
+    "cancel": "Annuler",
+    "save": "Enregistrer",
+    "search": "Rechercher",
+    "loading": "Chargement...",
+    "close": "Fermer",
+    "confirm": "Confirmer",
+    "copy": "Copier",
+    "copied": "Copie dans le presse-papiers",
+    "showDetails": "Voir les details",
+    "hideDetails": "Masquer les details",
+    "logout": "Se deconnecter",
+    "viewProofs": "Voir les preuves",
+    "lightMode": "Mode clair",
+    "darkMode": "Mode sombre",
+    "language": "Langue"
+  },
+  "error": {
+    "generic": "Une erreur est survenue. Veuillez reessayer.",
+    "sessionExpired": "Votre session a expire. Merci de vous reconnecter."
+  },
+  "home": {
+    "welcomeTitle": "Verifiez un pharmacien en toute confiance",
+    "welcomeSubtitle": "Recherchez, verifiez et consultez les preuves cryptographiques des pharmaciens agrees en Republique Democratique du Congo.",
+    "searchHint": "Nom, licence ou numero d'ordre...",
+    "verifyCta": "Verifier un QR code",
+    "pharmacistsCta": "Liste des pharmaciens",
+    "candidacyCta": "Deposer une candidature",
+    "benefitSearch": "Recherche rapide",
+    "benefitAuthenticity": "Authenticite garantie",
+    "benefitSecurity": "Securite cryptographique"
+  },
+  "placeholder": {
+    "title": "Bientot disponible",
+    "candidacyBody": "Le depot de candidature depuis l'application mobile arrive dans une prochaine mise a jour. Vous pouvez deja postuler depuis le site web VALIDIKA."
+  },
+  "auth": {
+    "loginTitle": "Connexion",
+    "loginSubtitle": "Accedez a votre espace VALIDIKA",
+    "email": "Adresse email",
+    "password": "Mot de passe",
+    "loginButton": "Se connecter",
+    "noAccount": "Pas encore de compte ?",
+    "registerLink": "Creer un compte",
+    "registerTitle": "Creer un compte",
+    "registerSubtitle": "Rejoignez VALIDIKA en quelques secondes",
+    "name": "Nom complet",
+    "confirmPassword": "Confirmer le mot de passe",
+    "registerButton": "Creer mon compte",
+    "haveAccount": "Vous avez deja un compte ?",
+    "loginLink": "Se connecter",
+    "passwordHint": "8 caracteres minimum",
+    "otpRequired": "Code de double authentification requis",
+    "otpLabel": "Code a 6 chiffres",
+    "otpButton": "Valider",
+    "verifyEmailTitle": "Verification de l'email",
+    "verifyEmailSubtitle": "Saisissez le code a 6 chiffres envoye a votre adresse email.",
+    "codeLabel": "Code de verification",
+    "verifyButton": "Verifier mon email",
+    "resendCode": "Renvoyer le code",
+    "emailVerified": "Adresse email verifiee avec succes.",
+    "registerSuccess": "Compte cree avec succes. Vous pouvez vous connecter."
+  },
+  "pharmacists": {
+    "searchTitle": "Pharmaciens",
+    "searchHint": "Nom, licence, numero d'ordre, ville...",
+    "filters": "Filtres",
+    "province": "Province",
+    "city": "Ville",
+    "commune": "Commune",
+    "noResults": "Aucun pharmacien ne correspond a votre recherche.",
+    "resultsCount": "{} resultat(s)"
+  },
+  "pharmacist": {
+    "detailTitle": "Fiche pharmacien",
+    "identity": "Identite",
+    "licenseNumber": "Numero de licence",
+    "ordinalNumber": "Numero d'ordre",
+    "status": "Statut",
+    "establishment": "Etablissement",
+    "specialization": "Specialisation",
+    "registeredAt": "Date d'inscription",
+    "practiceStartedAt": "Debut d'exercice",
+    "licenseExpiresAt": "Expiration de la licence",
+    "address": "Adresse professionnelle",
+    "phone": "Telephone professionnel",
+    "email": "Email professionnel",
+    "proofTitle": "Preuve cryptographique",
+    "proofValid": "Preuve valide",
+    "proofInvalid": "Preuve invalide",
+    "hash": "Empreinte SHA-256",
+    "signature": "Signature numerique",
+    "merkleRoot": "Racine Merkle",
+    "merkleNodes": "Noeuds de preuve Merkle",
+    "proofVersion": "Version de la preuve",
+    "verifiedAt": "Verifie le"
+  },
+  "license": {
+    "active": "Actif",
+    "expired": "Expire",
+    "suspended": "Suspendu",
+    "revoked": "Revoque"
+  },
+  "verify": {
+    "title": "Verification publique",
+    "manualTab": "Saisie manuelle",
+    "scanTab": "Scanner un QR code",
+    "inputLabel": "QR token, numero de licence ou numero d'ordre",
+    "inputHint": "Ex: QR.PH-RDC-2026-000123.AB12CD...",
+    "submit": "Verifier",
+    "scanCta": "Ouvrir la camera",
+    "scanInstructions": "Placez le QR code du pharmacien dans le cadre.",
+    "resultValid": "Verification reussie",
+    "resultInvalid": "Preuve invalide",
+    "resultNotFound": "Aucune ressource trouvee pour ce code.",
+    "resultCompromised": "Preuve compromise : les donnees ne correspondent pas a la signature enregistree.",
+    "lastCheckedAt": "Derniere verification en ligne le {}"
+  },
+  "account": {
+    "title": "Mon compte",
+    "notLoggedIn": "Connectez-vous pour retrouver votre profil et vos candidatures.",
+    "loginCta": "Se connecter",
+    "logoutConfirmTitle": "Se deconnecter ?",
+    "logoutConfirmBody": "Vous devrez vous reconnecter pour acceder a votre compte.",
+    "myCandidacies": "Mes candidatures",
+    "noCandidacies": "Vous n'avez pas encore soumis de candidature.",
+    "adminNotes": "Note de l'administration"
+  },
+  "candidacy": {
+    "status": {
+      "pending": "En attente",
+      "accepted": "Acceptee",
+      "rejected": "Refusee"
+    }
+  }
+}

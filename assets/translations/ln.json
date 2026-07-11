@@ -1,0 +1,149 @@
+{
+  "app": {
+    "name": "VALIDIKA",
+    "tagline": "Kotala solo ya bafamasi ya RDC"
+  },
+  "nav": {
+    "home": "Ndako",
+    "verify": "Kotala solo",
+    "pharmacists": "Bafamasi",
+    "account": "Compte na ngai",
+    "login": "Kokota"
+  },
+  "common": {
+    "retry": "Meka lisusu",
+    "cancel": "Kolimwisa",
+    "save": "Kobomba",
+    "search": "Koluka",
+    "loading": "Ezali kotambola...",
+    "close": "Kokanga",
+    "confirm": "Kondima",
+    "copy": "Kopi",
+    "copied": "Ekopiami",
+    "showDetails": "Komonisa makambo",
+    "hideDetails": "Kobomba makambo",
+    "logout": "Kobima",
+    "viewProofs": "Kotala bilembo",
+    "lightMode": "Molili ya pembe",
+    "darkMode": "Molili ya moindo",
+    "language": "Lokota"
+  },
+  "error": {
+    "generic": "Likambo moko esalemi. Meka lisusu.",
+    "sessionExpired": "Ntango na yo esili. Kota lisusu."
+  },
+  "home": {
+    "welcomeTitle": "Kotala solo ya famasi na kimia",
+    "welcomeSubtitle": "Luka, tala solo mpe bilembo ya siantifike ya bafamasi oyo bandimami na RDC.",
+    "searchHint": "Nkombo, licence to nimero ya ordre...",
+    "verifyCta": "Kotala QR code",
+    "pharmacistsCta": "Liste ya bafamasi",
+    "candidacyCta": "Kotinda demande",
+    "benefitSearch": "Koluka noki",
+    "benefitAuthenticity": "Solo endimami",
+    "benefitSecurity": "Sécurité ya siantifike"
+  },
+  "placeholder": {
+    "title": "Ekoya kala te",
+    "candidacyBody": "Kotinda demande na application ya telefone ekoya na mise a jour mosusu. Okoki kotinda demande na site VALIDIKA."
+  },
+  "auth": {
+    "loginTitle": "Kokota",
+    "loginSubtitle": "Kokota na compte na yo ya VALIDIKA",
+    "email": "Adresse email",
+    "password": "Mot de passe",
+    "loginButton": "Kokota",
+    "noAccount": "Ozali na compte te?",
+    "registerLink": "Kosala compte",
+    "registerTitle": "Kosala compte",
+    "registerSubtitle": "Kosangana na VALIDIKA na basegonde moke",
+    "name": "Nkombo mobimba",
+    "confirmPassword": "Kondima mot de passe",
+    "registerButton": "Kosala compte na ngai",
+    "haveAccount": "Ozali na compte?",
+    "loginLink": "Kokota",
+    "passwordHint": "Nkoma 8 na se moke",
+    "otpRequired": "Code ya sécurité (2FA) esengelami",
+    "otpLabel": "Code ya chiffre 6",
+    "otpButton": "Kondima",
+    "verifyEmailTitle": "Kotala solo ya email",
+    "verifyEmailSubtitle": "Kotia code ya chiffre 6 oyo etindami na email na yo.",
+    "codeLabel": "Code ya verification",
+    "verifyButton": "Kotala email na ngai",
+    "resendCode": "Kotinda code lisusu",
+    "emailVerified": "Email endimami malamu.",
+    "registerSuccess": "Compte esalemi malamu. Okoki kokota."
+  },
+  "pharmacists": {
+    "searchTitle": "Bafamasi",
+    "searchHint": "Nkombo, licence, nimero ya ordre, ville...",
+    "filters": "Filtre",
+    "province": "Province",
+    "city": "Ville",
+    "commune": "Commune",
+    "noResults": "Famasi moko te ekokani na koluka na yo.",
+    "resultsCount": "Biyano {}"
+  },
+  "pharmacist": {
+    "detailTitle": "Fiche ya famasi",
+    "identity": "Bosolo",
+    "licenseNumber": "Nimero ya licence",
+    "ordinalNumber": "Nimero ya ordre",
+    "status": "Etat",
+    "establishment": "Etablissement",
+    "specialization": "Espesialite",
+    "registeredAt": "Mokolo ya inscription",
+    "practiceStartedAt": "Ebandeli ya mosala",
+    "licenseExpiresAt": "Suka ya licence",
+    "address": "Adresse ya mosala",
+    "phone": "Telefone ya mosala",
+    "email": "Email ya mosala",
+    "proofTitle": "Elembo ya siantifike",
+    "proofValid": "Elembo ezali solo",
+    "proofInvalid": "Elembo ezali solo te",
+    "hash": "Empreinte SHA-256",
+    "signature": "Signature ya numerike",
+    "merkleRoot": "Racine Merkle",
+    "merkleNodes": "Ba noeuds ya preuve Merkle",
+    "proofVersion": "Version ya elembo",
+    "verifiedAt": "Etalami mokolo ya"
+  },
+  "license": {
+    "active": "Ezali malamu",
+    "expired": "Esili",
+    "suspended": "Ekangami",
+    "revoked": "Elongolami"
+  },
+  "verify": {
+    "title": "Kotala solo ya bato nyonso",
+    "manualTab": "Kokoma na maboko",
+    "scanTab": "Ko-scanner QR code",
+    "inputLabel": "QR token, nimero ya licence to nimero ya ordre",
+    "inputHint": "Ndakisa: QR.PH-RDC-2026-000123.AB12CD...",
+    "submit": "Kotala solo",
+    "scanCta": "Kofungola kamera",
+    "scanInstructions": "Tia QR code ya famasi na kati ya cadre.",
+    "resultValid": "Verification esali malamu",
+    "resultInvalid": "Elembo ezali solo te",
+    "resultNotFound": "Eloko moko te emonani mpo na code oyo.",
+    "resultCompromised": "Elembo ebebi: ba donnée ekokani te na signature oyo ebombami.",
+    "lastCheckedAt": "Verification ya suka na internet mokolo ya {}"
+  },
+  "account": {
+    "title": "Compte na ngai",
+    "notLoggedIn": "Kota mpo na kozwa profil mpe ba demande na yo.",
+    "loginCta": "Kokota",
+    "logoutConfirmTitle": "Kobima?",
+    "logoutConfirmBody": "Okosengela kokota lisusu mpo na kozwa compte na yo.",
+    "myCandidacies": "Ba demande na ngai",
+    "noCandidacies": "Otindi naino demande te.",
+    "adminNotes": "Commentaire ya administration"
+  },
+  "candidacy": {
+    "status": {
+      "pending": "Ezali kozela",
+      "accepted": "Endimami",
+      "rejected": "Eboyami"
+    }
+  }
+}
