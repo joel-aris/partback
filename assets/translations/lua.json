@@ -1,0 +1,162 @@
+{
+  "app": {
+    "name": "VALIDIKA",
+    "tagline": "Kujadika kwa bafamasi ba RDC"
+  },
+  "nav": {
+    "home": "Kuanzu",
+    "verify": "Jadika",
+    "pharmacists": "Bafamasi",
+    "account": "Compte wanyi",
+    "login": "Bwela"
+  },
+  "common": {
+    "retry": "Enza kabidi",
+    "cancel": "Ka kuenza to",
+    "save": "Lama",
+    "search": "Kimba",
+    "loading": "Kudienda...",
+    "close": "Kanga",
+    "confirm": "Itaba",
+    "copy": "Kopia",
+    "copied": "Kopiabu",
+    "showDetails": "Leja malu",
+    "hideDetails": "Sokoka malu",
+    "logout": "Pataka",
+    "viewProofs": "Mona bimanyinu",
+    "lightMode": "Butoke",
+    "darkMode": "Mîdima",
+    "language": "Muakulu"
+  },
+  "error": {
+    "generic": "Bilumbu bimue biakenzeka. Enza kabidi.",
+    "sessionExpired": "Tshikondo tshienu tshiakumina. Bwela kabidi."
+  },
+  "home": {
+    "welcomeTitle": "Jadika mufamasi ne mutshima wonso",
+    "welcomeSubtitle": "Kimba, jadika ne mona bimanyinu bia siantifiki bia bafamasi badi bitikijibue mu RDC.",
+    "searchHint": "Dîna, license anyi nimero wa ordre...",
+    "verifyCta": "Jadika QR code",
+    "pharmacistsCta": "Tshibisu tshia bafamasi",
+    "candidacyCta": "Tuma dilomba",
+    "benefitSearch": "Dikimba dia lubilu",
+    "benefitAuthenticity": "Bulelela budi bujadikibua",
+    "benefitSecurity": "Bukubi bua siantifiki"
+  },
+  "placeholder": {
+    "title": "Bidi bilua kumpala",
+    "candidacyBody": "Kutuma dilomba ku application wa telefone kudi kulua ku mise a jour ikuabu. Udi mua kutuma dilomba ku site wa VALIDIKA."
+  },
+  "auth": {
+    "loginTitle": "Bwela",
+    "loginSubtitle": "Bwela mu compte wenu wa VALIDIKA",
+    "email": "Aderesi ya email",
+    "password": "Mot de passe",
+    "loginButton": "Bwela",
+    "noAccount": "Kuena ne compte to?",
+    "registerLink": "Enza compte",
+    "registerTitle": "Enza compte",
+    "registerSubtitle": "Disangisha ne VALIDIKA mu bisekonda bikese",
+    "name": "Dîna dijima",
+    "confirmPassword": "Itaba mot de passe",
+    "registerButton": "Enza compte wanyi",
+    "haveAccount": "Udi ne compte?",
+    "loginLink": "Bwela",
+    "passwordHint": "Miaku 8 pa kabuipi",
+    "otpRequired": "Code wa 2FA udi mulombeka",
+    "otpLabel": "Code wa bimba 6",
+    "otpButton": "Itaba",
+    "verifyEmailTitle": "Kujadika kwa email",
+    "verifyEmailSubtitle": "Bueja code wa bimba 6 wakutumibua ku email wenu.",
+    "codeLabel": "Code wa kujadika",
+    "verifyButton": "Jadika email wanyi",
+    "resendCode": "Tuma code kabidi",
+    "emailVerified": "Email wenu wakumbanyibua bimpe.",
+    "registerSuccess": "Compte wenzeka bimpe. Udi mua kubwela."
+  },
+  "pharmacists": {
+    "searchTitle": "Bafamasi",
+    "searchHint": "Dîna, license, nimero wa ordre, tshimenga...",
+    "filters": "Bia kutshoseja",
+    "province": "Province",
+    "city": "Tshimenga",
+    "commune": "Commune",
+    "noResults": "Kakuena mufamasi udi upetangana ne dikimba dienu to.",
+    "resultsCount": "Bipetangana {}"
+  },
+  "pharmacist": {
+    "detailTitle": "Fiche wa mufamasi",
+    "identity": "Bumuntu",
+    "licenseNumber": "Nimero wa license",
+    "ordinalNumber": "Nimero wa ordre",
+    "status": "Nsombelu",
+    "establishment": "Etablissement",
+    "specialization": "Espesialite",
+    "registeredAt": "Dituku dia dilombeja",
+    "practiceStartedAt": "Ntuadijilu wa mudimu",
+    "licenseExpiresAt": "Nsukumunu wa license",
+    "address": "Aderesi wa mudimu",
+    "phone": "Telefone wa mudimu",
+    "email": "Email wa mudimu",
+    "proofTitle": "Bimanyinu bia siantifiki",
+    "proofValid": "Bimanyinu bidi bilelela",
+    "proofInvalid": "Bimanyinu kabiena bilelela to",
+    "hash": "Empreinte SHA-256",
+    "signature": "Signature ya numerike",
+    "merkleRoot": "Racine Merkle",
+    "merkleNodes": "Bimanyinu bia Merkle",
+    "proofVersion": "Version wa bimanyinu",
+    "verifiedAt": "Bidi bijadikibua dituku dia"
+  },
+  "license": {
+    "active": "Udi mudimu",
+    "expired": "Wakumina",
+    "suspended": "Wakangibua",
+    "revoked": "Wakumbushibua"
+  },
+  "verify": {
+    "title": "Kujadika kua bantu bonso",
+    "manualTab": "Fundila ku tshianza",
+    "scanTab": "Scanner QR code",
+    "inputLabel": "QR token, nimero wa license anyi nimero wa ordre",
+    "inputHint": "Tshilejilu: QR.PH-RDC-2026-000123.AB12CD...",
+    "submit": "Jadika",
+    "scanCta": "Zulula kamera",
+    "scanInstructions": "Teka QR code wa mufamasi munkatshi mua tshimba.",
+    "resultValid": "Kujadika kuenzeka bimpe",
+    "resultInvalid": "Bimanyinu kabiena bilelela to",
+    "resultNotFound": "Kakuena tshintu tshiakumonika bua code eu to.",
+    "resultCompromised": "Bimanyinu bishipe: data kayipetangana ne signature idi ilamibua to.",
+    "lastCheckedAt": "Kujadika kua kumpelu ku internet dituku dia {}"
+  },
+  "account": {
+    "title": "Compte wanyi",
+    "notLoggedIn": "Bwela bua kupeta profile wenu ne malomba enu.",
+    "loginCta": "Bwela",
+    "logoutConfirmTitle": "Pataka?",
+    "logoutConfirmBody": "Nebalombe bua kubwela kabidi bua kupeta compte wenu.",
+    "myCandidacies": "Malomba anyi",
+    "noCandidacies": "Kuena mutumine dilomba nansha dimue to.",
+    "adminNotes": "Tshiena tshia administration"
+  },
+  "candidacy": {
+    "title": "Tuma dilomba",
+    "subtitle": "Disangisha ne tshibisu tshia bafamasi ba RDC mu bisekonda bikese.",
+    "scanCta": "Jadika mukanda (carte pro, diplome, tshimanyinu tshia bumuntu)",
+    "scanSuccess": "Dîna diakumbanyibua kudi mukanda ujadikibue. Mona bimpe kumpala kua kutuma.",
+    "scanEmpty": "Kakuena tshintu tshiamanyika bienzeka. Fula nayewe.",
+    "firstName": "Dîna dia kumpala",
+    "lastName": "Dîna dia dîku",
+    "notes": "Malu makuabu (kaena obligatoire to)",
+    "cv": "CV (PDF, DOC, DOCX)",
+    "motivationLetter": "Mukanda wa motivation (kaena obligatoire to)",
+    "submit": "Tuma dilomba dianyi",
+    "submitSuccess": "Dilomba diakutumibua bimpe! Udi mua kulonda statut wa dienu mu compte wenu.",
+    "cvRequired": "CV idi mulombeka.",
+    "status": {
+      "pending": "Kudindila",
+      "accepted": "Bitabuja",
+      "rejected": "Bibenga"
+    }
+  }
+}

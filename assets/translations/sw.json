@@ -1,0 +1,162 @@
+{
+  "app": {
+    "name": "VALIDIKA",
+    "tagline": "Uthibitisho wa wafamasia wa DRC"
+  },
+  "nav": {
+    "home": "Nyumbani",
+    "verify": "Thibitisha",
+    "pharmacists": "Wafamasia",
+    "account": "Akaunti yangu",
+    "login": "Ingia"
+  },
+  "common": {
+    "retry": "Jaribu tena",
+    "cancel": "Ghairi",
+    "save": "Hifadhi",
+    "search": "Tafuta",
+    "loading": "Inapakia...",
+    "close": "Funga",
+    "confirm": "Thibitisha",
+    "copy": "Nakili",
+    "copied": "Imenakiliwa",
+    "showDetails": "Onyesha maelezo",
+    "hideDetails": "Ficha maelezo",
+    "logout": "Toka",
+    "viewProofs": "Ona uthibitisho",
+    "lightMode": "Hali angavu",
+    "darkMode": "Hali ya giza",
+    "language": "Lugha"
+  },
+  "error": {
+    "generic": "Hitilafu imetokea. Tafadhali jaribu tena.",
+    "sessionExpired": "Muda wako umekwisha. Tafadhali ingia tena."
+  },
+  "home": {
+    "welcomeTitle": "Thibitisha mfamasia kwa uhakika",
+    "welcomeSubtitle": "Tafuta, thibitisha na angalia uthibitisho wa kriptografia wa wafamasia walioidhinishwa nchini DRC.",
+    "searchHint": "Jina, leseni au nambari ya chama...",
+    "verifyCta": "Thibitisha msimbo wa QR",
+    "pharmacistsCta": "Orodha ya wafamasia",
+    "candidacyCta": "Tuma maombi",
+    "benefitSearch": "Utafutaji wa haraka",
+    "benefitAuthenticity": "Uhalisi wa uhakika",
+    "benefitSecurity": "Usalama wa kriptografia"
+  },
+  "placeholder": {
+    "title": "Inakuja hivi karibuni",
+    "candidacyBody": "Kutuma maombi kupitia programu ya simu kutapatikana hivi karibuni. Unaweza tayari kutuma maombi kupitia tovuti ya VALIDIKA."
+  },
+  "auth": {
+    "loginTitle": "Ingia",
+    "loginSubtitle": "Fikia akaunti yako ya VALIDIKA",
+    "email": "Barua pepe",
+    "password": "Nywila",
+    "loginButton": "Ingia",
+    "noAccount": "Huna akaunti bado?",
+    "registerLink": "Fungua akaunti",
+    "registerTitle": "Fungua akaunti",
+    "registerSubtitle": "Jiunge na VALIDIKA kwa sekunde chache",
+    "name": "Jina kamili",
+    "confirmPassword": "Thibitisha nywila",
+    "registerButton": "Fungua akaunti yangu",
+    "haveAccount": "Una akaunti tayari?",
+    "loginLink": "Ingia",
+    "passwordHint": "Angalau herufi 8",
+    "otpRequired": "Msimbo wa uthibitisho wa hatua mbili unahitajika",
+    "otpLabel": "Msimbo wa tarakimu 6",
+    "otpButton": "Thibitisha",
+    "verifyEmailTitle": "Uthibitisho wa barua pepe",
+    "verifyEmailSubtitle": "Ingiza msimbo wa tarakimu 6 uliotumwa kwenye barua pepe yako.",
+    "codeLabel": "Msimbo wa uthibitisho",
+    "verifyButton": "Thibitisha barua pepe yangu",
+    "resendCode": "Tuma msimbo tena",
+    "emailVerified": "Barua pepe imethibitishwa kwa mafanikio.",
+    "registerSuccess": "Akaunti imefunguliwa kwa mafanikio. Sasa unaweza kuingia."
+  },
+  "pharmacists": {
+    "searchTitle": "Wafamasia",
+    "searchHint": "Jina, leseni, nambari ya chama, mji...",
+    "filters": "Vichujio",
+    "province": "Mkoa",
+    "city": "Mji",
+    "commune": "Kata",
+    "noResults": "Hakuna mfamasia anayelingana na utafutaji wako.",
+    "resultsCount": "Matokeo {}"
+  },
+  "pharmacist": {
+    "detailTitle": "Taarifa ya mfamasia",
+    "identity": "Utambulisho",
+    "licenseNumber": "Nambari ya leseni",
+    "ordinalNumber": "Nambari ya chama",
+    "status": "Hali",
+    "establishment": "Taasisi",
+    "specialization": "Utaalamu",
+    "registeredAt": "Tarehe ya usajili",
+    "practiceStartedAt": "Mwanzo wa kazi",
+    "licenseExpiresAt": "Mwisho wa leseni",
+    "address": "Anwani ya kazi",
+    "phone": "Simu ya kazi",
+    "email": "Barua pepe ya kazi",
+    "proofTitle": "Uthibitisho wa kriptografia",
+    "proofValid": "Uthibitisho ni sahihi",
+    "proofInvalid": "Uthibitisho si sahihi",
+    "hash": "Alama ya SHA-256",
+    "signature": "Sahihi ya kidijitali",
+    "merkleRoot": "Mzizi wa Merkle",
+    "merkleNodes": "Vipengele vya uthibitisho wa Merkle",
+    "proofVersion": "Toleo la uthibitisho",
+    "verifiedAt": "Ilithibitishwa tarehe"
+  },
+  "license": {
+    "active": "Inatumika",
+    "expired": "Imeisha muda",
+    "suspended": "Imesitishwa",
+    "revoked": "Imefutwa"
+  },
+  "verify": {
+    "title": "Uthibitisho wa umma",
+    "manualTab": "Ingiza mwenyewe",
+    "scanTab": "Changanua msimbo wa QR",
+    "inputLabel": "Msimbo wa QR, nambari ya leseni au nambari ya chama",
+    "inputHint": "Mfano: QR.PH-RDC-2026-000123.AB12CD...",
+    "submit": "Thibitisha",
+    "scanCta": "Fungua kamera",
+    "scanInstructions": "Weka msimbo wa QR wa mfamasia ndani ya fremu.",
+    "resultValid": "Uthibitisho umefanikiwa",
+    "resultInvalid": "Uthibitisho si sahihi",
+    "resultNotFound": "Hakuna kilichopatikana kwa msimbo huu.",
+    "resultCompromised": "Uthibitisho umeathiriwa: data hailingani na sahihi iliyohifadhiwa.",
+    "lastCheckedAt": "Ilithibitishwa mtandaoni mara ya mwisho tarehe {}"
+  },
+  "account": {
+    "title": "Akaunti yangu",
+    "notLoggedIn": "Ingia ili kufikia wasifu wako na maombi yako.",
+    "loginCta": "Ingia",
+    "logoutConfirmTitle": "Toka?",
+    "logoutConfirmBody": "Utahitaji kuingia tena ili kufikia akaunti yako.",
+    "myCandidacies": "Maombi yangu",
+    "noCandidacies": "Bado hujatuma ombi lolote.",
+    "adminNotes": "Maoni ya msimamizi"
+  },
+  "candidacy": {
+    "title": "Tuma maombi",
+    "subtitle": "Jiunge na orodha ya wafamasia walioidhinishwa DRC kwa dakika chache.",
+    "scanCta": "Changanua hati (kadi ya kitaaluma, diploma, kitambulisho)",
+    "scanSuccess": "Jina limejazwa kutoka hati iliyochanganuliwa. Kagua kabla ya kutuma.",
+    "scanEmpty": "Hakuna taarifa iliyotambuliwa kiotomatiki. Jaza mwenyewe.",
+    "firstName": "Jina la kwanza",
+    "lastName": "Jina la ukoo",
+    "notes": "Maelezo (si lazima)",
+    "cv": "CV (PDF, DOC, DOCX)",
+    "motivationLetter": "Barua ya nia (si lazima)",
+    "submit": "Tuma maombi yangu",
+    "submitSuccess": "Maombi yametumwa kwa mafanikio! Unaweza kufuatilia hali yake kwenye akaunti yako.",
+    "cvRequired": "CV inahitajika.",
+    "status": {
+      "pending": "Inasubiri",
+      "accepted": "Imekubaliwa",
+      "rejected": "Imekataliwa"
+    }
+  }
+}
