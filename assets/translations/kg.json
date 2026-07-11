@@ -1,0 +1,162 @@
+{
+  "app": {
+    "name": "VALIDIKA",
+    "tagline": "Kuverifika bafamasi ya RDC"
+  },
+  "nav": {
+    "home": "Kuna nzo",
+    "verify": "Verifika",
+    "pharmacists": "Bafamasi",
+    "account": "Compte na mono",
+    "login": "Kota"
+  },
+  "common": {
+    "retry": "Meka diaka",
+    "cancel": "Vengila",
+    "save": "Bumba",
+    "search": "Sosa",
+    "loading": "Ke tambula...",
+    "close": "Kanga",
+    "confirm": "Ndima",
+    "copy": "Kopya",
+    "copied": "Kopyami",
+    "showDetails": "Monisa mambu",
+    "hideDetails": "Bumba mambu",
+    "logout": "Basika",
+    "viewProofs": "Tala bimbangi",
+    "lightMode": "Kimwangi ya nlangu",
+    "darkMode": "Kimwangi ya mfinda",
+    "language": "Ndinga"
+  },
+  "error": {
+    "generic": "Diambu mosi ke salamene. Meka diaka.",
+    "sessionExpired": "Ntangu na nge me manisa. Kota diaka."
+  },
+  "home": {
+    "welcomeTitle": "Verifika mfamasi na kimbwangi",
+    "welcomeSubtitle": "Sosa, verifika mpe tala bimbangi ya siantifiki ya bafamasi bandwisu na RDC.",
+    "searchHint": "Nkumbu, license to nimero ya ordre...",
+    "verifyCta": "Verifika QR code",
+    "pharmacistsCta": "Liste ya bafamasi",
+    "candidacyCta": "Tinda demande",
+    "benefitSearch": "Kusosa nswalu",
+    "benefitAuthenticity": "Kimbangi ya sikisiki",
+    "benefitSecurity": "Kikeba ya siantifiki"
+  },
+  "placeholder": {
+    "title": "Ke kwiza kulanda",
+    "candidacyBody": "Kutinda demande na application ya telefone ke kwiza na mise a jour yankaka. Nge lenda tinda demande na site VALIDIKA."
+  },
+  "auth": {
+    "loginTitle": "Kota",
+    "loginSubtitle": "Kota na compte na nge ya VALIDIKA",
+    "email": "Adresse email",
+    "password": "Mot de passe",
+    "loginButton": "Kota",
+    "noAccount": "Nge kele ve na compte?",
+    "registerLink": "Sala compte",
+    "registerTitle": "Sala compte",
+    "registerSubtitle": "Kwisa na VALIDIKA na bisekondi fioti",
+    "name": "Nkumbu ya mvimba",
+    "confirmPassword": "Ndima mot de passe",
+    "registerButton": "Sala compte na mono",
+    "haveAccount": "Nge kele na compte?",
+    "loginLink": "Kota",
+    "passwordHint": "Bisono 8 na se fioti",
+    "otpRequired": "Code ya 2FA ke lombama",
+    "otpLabel": "Code ya bisiku 6",
+    "otpButton": "Ndima",
+    "verifyEmailTitle": "Verifikasio ya email",
+    "verifyEmailSubtitle": "Tula code ya bisiku 6 yina tindisu na email na nge.",
+    "codeLabel": "Code ya verification",
+    "verifyButton": "Verifika email na mono",
+    "resendCode": "Tinda code diaka",
+    "emailVerified": "Email me verifikama mbote.",
+    "registerSuccess": "Compte me salama mbote. Nge lenda kota."
+  },
+  "pharmacists": {
+    "searchTitle": "Bafamasi",
+    "searchHint": "Nkumbu, license, nimero ya ordre, mbanza...",
+    "filters": "Bafiltre",
+    "province": "Province",
+    "city": "Mbanza",
+    "commune": "Commune",
+    "noResults": "Kutoto famasi ke fwana ve na kisosila na nge.",
+    "resultsCount": "Bisumbula {}"
+  },
+  "pharmacist": {
+    "detailTitle": "Fiche ya mfamasi",
+    "identity": "Kimonisa",
+    "licenseNumber": "Nimero ya license",
+    "ordinalNumber": "Nimero ya ordre",
+    "status": "Kimfumu",
+    "establishment": "Etablissement",
+    "specialization": "Espesialite",
+    "registeredAt": "Kilumbu ya inscription",
+    "practiceStartedAt": "Ntambu ya kisalu",
+    "licenseExpiresAt": "Nsuka ya license",
+    "address": "Adresse ya kisalu",
+    "phone": "Telefone ya kisalu",
+    "email": "Email ya kisalu",
+    "proofTitle": "Kimbangi ya siantifiki",
+    "proofValid": "Kimbangi kele ya sikisiki",
+    "proofInvalid": "Kimbangi kele ya sikisiki ve",
+    "hash": "Empreinte SHA-256",
+    "signature": "Signature ya numerike",
+    "merkleRoot": "Racine Merkle",
+    "merkleNodes": "Ba noeuds ya kimbangi Merkle",
+    "proofVersion": "Version ya kimbangi",
+    "verifiedAt": "Verifikamu kilumbu ya"
+  },
+  "license": {
+    "active": "Ke sala",
+    "expired": "Me manisa",
+    "suspended": "Me kangama",
+    "revoked": "Me katulwa"
+  },
+  "verify": {
+    "title": "Verification ya bantu yonso",
+    "manualTab": "Sonika na moko",
+    "scanTab": "Scanner QR code",
+    "inputLabel": "QR token, nimero ya license to nimero ya ordre",
+    "inputHint": "Mbandu: QR.PH-RDC-2026-000123.AB12CD...",
+    "submit": "Verifika",
+    "scanCta": "Kangula kamera",
+    "scanInstructions": "Tula QR code ya mfamasi na kati ya cadre.",
+    "resultValid": "Verification me sala mbote",
+    "resultInvalid": "Kimbangi kele ya sikisiki ve",
+    "resultNotFound": "Kima ve me monana mu code yayi.",
+    "resultCompromised": "Kimbangi me bebisama: bibuka ke fwana ve ye signature yina bumbama.",
+    "lastCheckedAt": "Verification ya nsuka na internet kilumbu ya {}"
+  },
+  "account": {
+    "title": "Compte na mono",
+    "notLoggedIn": "Kota mu baka profil na nge ye bandemande na nge.",
+    "loginCta": "Kota",
+    "logoutConfirmTitle": "Basika?",
+    "logoutConfirmBody": "Nge ta lombama kukota diaka mu baka compte na nge.",
+    "myCandidacies": "Bandemande na mono",
+    "noCandidacies": "Nge me tinda ve ata demande mosi.",
+    "adminNotes": "Commentaire ya administration"
+  },
+  "candidacy": {
+    "title": "Tinda demande",
+    "subtitle": "Kota na liste ya bafamasi ya RDC na bisekondi fioti.",
+    "scanCta": "Scanner mukanda (carte pro, diplome, pieces d'identite)",
+    "scanSuccess": "Nkumbu me fulusuka banda na mukanda ya scan. Tala mbote na ntwala ya tinda.",
+    "scanEmpty": "Kima ve me monana automatiquement. Fulusa nge mosi.",
+    "firstName": "Nkumbu ya ntete",
+    "lastName": "Nkumbu ya dikanda",
+    "notes": "Ba remarque (ve obligatoire)",
+    "cv": "CV (PDF, DOC, DOCX)",
+    "motivationLetter": "Mukanda ya motivation (ve obligatoire)",
+    "submit": "Tinda demande na mono",
+    "submitSuccess": "Demande me tindama mbote! Nge lenda landa statut na ye na compte na nge.",
+    "cvRequired": "CV kele obligatoire.",
+    "status": {
+      "pending": "Ke vingila",
+      "accepted": "Me ndimama",
+      "rejected": "Me buiswa"
+    }
+  }
+}

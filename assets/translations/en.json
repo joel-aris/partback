@@ -1,0 +1,162 @@
+{
+  "app": {
+    "name": "VALIDIKA",
+    "tagline": "Verification of pharmacists in the DRC"
+  },
+  "nav": {
+    "home": "Home",
+    "verify": "Verify",
+    "pharmacists": "Pharmacists",
+    "account": "My account",
+    "login": "Login"
+  },
+  "common": {
+    "retry": "Retry",
+    "cancel": "Cancel",
+    "save": "Save",
+    "search": "Search",
+    "loading": "Loading...",
+    "close": "Close",
+    "confirm": "Confirm",
+    "copy": "Copy",
+    "copied": "Copied to clipboard",
+    "showDetails": "Show details",
+    "hideDetails": "Hide details",
+    "logout": "Log out",
+    "viewProofs": "View proofs",
+    "lightMode": "Light mode",
+    "darkMode": "Dark mode",
+    "language": "Language"
+  },
+  "error": {
+    "generic": "Something went wrong. Please try again.",
+    "sessionExpired": "Your session has expired. Please sign in again."
+  },
+  "home": {
+    "welcomeTitle": "Verify a pharmacist with confidence",
+    "welcomeSubtitle": "Search, verify and inspect the cryptographic proofs of licensed pharmacists in the Democratic Republic of Congo.",
+    "searchHint": "Name, license or ordinal number...",
+    "verifyCta": "Verify a QR code",
+    "pharmacistsCta": "Browse pharmacists",
+    "candidacyCta": "Submit an application",
+    "benefitSearch": "Fast search",
+    "benefitAuthenticity": "Guaranteed authenticity",
+    "benefitSecurity": "Cryptographic security"
+  },
+  "placeholder": {
+    "title": "Coming soon",
+    "candidacyBody": "Submitting an application from the mobile app is coming in a future update. You can already apply from the VALIDIKA website."
+  },
+  "auth": {
+    "loginTitle": "Login",
+    "loginSubtitle": "Access your VALIDIKA account",
+    "email": "Email address",
+    "password": "Password",
+    "loginButton": "Sign in",
+    "noAccount": "Don't have an account yet?",
+    "registerLink": "Create an account",
+    "registerTitle": "Create an account",
+    "registerSubtitle": "Join VALIDIKA in a few seconds",
+    "name": "Full name",
+    "confirmPassword": "Confirm password",
+    "registerButton": "Create my account",
+    "haveAccount": "Already have an account?",
+    "loginLink": "Sign in",
+    "passwordHint": "At least 8 characters",
+    "otpRequired": "Two-factor authentication code required",
+    "otpLabel": "6-digit code",
+    "otpButton": "Validate",
+    "verifyEmailTitle": "Email verification",
+    "verifyEmailSubtitle": "Enter the 6-digit code sent to your email address.",
+    "codeLabel": "Verification code",
+    "verifyButton": "Verify my email",
+    "resendCode": "Resend code",
+    "emailVerified": "Email address verified successfully.",
+    "registerSuccess": "Account created successfully. You can now sign in."
+  },
+  "pharmacists": {
+    "searchTitle": "Pharmacists",
+    "searchHint": "Name, license, ordinal number, city...",
+    "filters": "Filters",
+    "province": "Province",
+    "city": "City",
+    "commune": "Commune",
+    "noResults": "No pharmacist matches your search.",
+    "resultsCount": "{} result(s)"
+  },
+  "pharmacist": {
+    "detailTitle": "Pharmacist record",
+    "identity": "Identity",
+    "licenseNumber": "License number",
+    "ordinalNumber": "Ordinal number",
+    "status": "Status",
+    "establishment": "Establishment",
+    "specialization": "Specialization",
+    "registeredAt": "Registration date",
+    "practiceStartedAt": "Practice start date",
+    "licenseExpiresAt": "License expiry",
+    "address": "Professional address",
+    "phone": "Professional phone",
+    "email": "Professional email",
+    "proofTitle": "Cryptographic proof",
+    "proofValid": "Proof valid",
+    "proofInvalid": "Proof invalid",
+    "hash": "SHA-256 hash",
+    "signature": "Digital signature",
+    "merkleRoot": "Merkle root",
+    "merkleNodes": "Merkle proof nodes",
+    "proofVersion": "Proof version",
+    "verifiedAt": "Verified at"
+  },
+  "license": {
+    "active": "Active",
+    "expired": "Expired",
+    "suspended": "Suspended",
+    "revoked": "Revoked"
+  },
+  "verify": {
+    "title": "Public verification",
+    "manualTab": "Manual entry",
+    "scanTab": "Scan a QR code",
+    "inputLabel": "QR token, license number or ordinal number",
+    "inputHint": "E.g: QR.PH-RDC-2026-000123.AB12CD...",
+    "submit": "Verify",
+    "scanCta": "Open camera",
+    "scanInstructions": "Place the pharmacist's QR code inside the frame.",
+    "resultValid": "Verification successful",
+    "resultInvalid": "Invalid proof",
+    "resultNotFound": "No resource found for this code.",
+    "resultCompromised": "Compromised proof: the data does not match the stored signature.",
+    "lastCheckedAt": "Last checked online on {}"
+  },
+  "account": {
+    "title": "My account",
+    "notLoggedIn": "Sign in to access your profile and applications.",
+    "loginCta": "Sign in",
+    "logoutConfirmTitle": "Log out?",
+    "logoutConfirmBody": "You will need to sign in again to access your account.",
+    "myCandidacies": "My applications",
+    "noCandidacies": "You haven't submitted any application yet.",
+    "adminNotes": "Administrator's note"
+  },
+  "candidacy": {
+    "title": "Submit a candidacy",
+    "subtitle": "Join the registry of licensed pharmacists in the DRC in a few minutes.",
+    "scanCta": "Scan a document (professional card, diploma, ID)",
+    "scanSuccess": "Name pre-filled from the scanned document. Please verify before sending.",
+    "scanEmpty": "No information could be recognized automatically. Please fill in manually.",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "notes": "Notes (optional)",
+    "cv": "CV (PDF, DOC, DOCX)",
+    "motivationLetter": "Motivation letter (optional)",
+    "submit": "Submit my candidacy",
+    "submitSuccess": "Candidacy submitted successfully! You can track its status in your account.",
+    "cvRequired": "The CV is required.",
+    "status": {
+      "pending": "Pending",
+      "accepted": "Accepted",
+      "rejected": "Rejected"
+    }
+  }
+}
