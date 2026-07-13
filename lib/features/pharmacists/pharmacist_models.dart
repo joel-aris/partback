@@ -115,12 +115,18 @@ class CryptographicProof {
     required this.verifiedAt,
   });
 
-  final bool valid;
-  final bool hashValid;
-  final bool signatureValid;
-  final bool merkleValid;
+  // Nullable: the backend only returns the full Merkle-enriched proof for
+  // pharmacists. For documents, `cryptographic_proof` omits `valid`,
+  // `hash_valid`, `signature_valid` and `merkle_valid` entirely, so these
+  // must stay null ("not provided by the API") rather than default to
+  // false ("proven invalid") — otherwise a genuinely valid signed document
+  // renders with a red "invalid" badge and crossed-out rows for no reason.
+  final bool? valid;
+  final bool? hashValid;
+  final bool? signatureValid;
+  final bool? merkleValid;
   final String? merkleRoot;
-  final int merkleProofNodes;
+  final int? merkleProofNodes;
   final String? proofVersion;
   final String? signatureAlgorithm;
   final String? publicKeyFingerprint;
@@ -128,12 +134,12 @@ class CryptographicProof {
 
   factory CryptographicProof.fromJson(Map<String, dynamic> json) {
     return CryptographicProof(
-      valid: json['valid'] as bool? ?? false,
-      hashValid: json['hash_valid'] as bool? ?? false,
-      signatureValid: json['signature_valid'] as bool? ?? false,
-      merkleValid: json['merkle_valid'] as bool? ?? false,
+      valid: json['valid'] as bool?,
+      hashValid: json['hash_valid'] as bool?,
+      signatureValid: json['signature_valid'] as bool?,
+      merkleValid: json['merkle_valid'] as bool?,
       merkleRoot: json['merkle_root']?.toString(),
-      merkleProofNodes: json['merkle_proof_nodes'] as int? ?? 0,
+      merkleProofNodes: json['merkle_proof_nodes'] as int?,
       proofVersion: json['proof_version']?.toString(),
       signatureAlgorithm: json['signature_algorithm']?.toString(),
       publicKeyFingerprint: json['public_key_fingerprint']?.toString(),

@@ -62,7 +62,7 @@
     "registerButton": "Create my account",
     "haveAccount": "Already have an account?",
     "loginLink": "Sign in",
-    "passwordHint": "At least 8 characters",
+    "passwordHint": "At least 12 characters, with uppercase, lowercase, a number and a symbol",
     "otpRequired": "Two-factor authentication code required",
     "otpLabel": "6-digit code",
     "otpButton": "Validate",

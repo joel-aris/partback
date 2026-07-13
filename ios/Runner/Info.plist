@@ -27,7 +27,7 @@
 		<key>LSRequiresIPhoneOS</key>
 		<true/>
 		<key>NSCameraUsageDescription</key>
-		<string>La camera est utilisee pour scanner le QR code de verification d'un pharmacien.</string>
+		<string>La camera est utilisee pour scanner le QR code de verification d'un pharmacien et pour photographier un document (carte professionnelle, diplome, piece d'identite) lors d'une candidature.</string>
 		<key>UIApplicationSceneManifest</key>
 		<dict>
 			<key>UIApplicationSupportsMultipleScenes</key>

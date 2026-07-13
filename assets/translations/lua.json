@@ -62,7 +62,7 @@
     "registerButton": "Enza compte wanyi",
     "haveAccount": "Udi ne compte?",
     "loginLink": "Bwela",
-    "passwordHint": "Miaku 8 pa kabuipi",
+    "passwordHint": "Miaku 12 pa kabuipi, ne majuscule, minuscule, chiffre ne symbole",
     "otpRequired": "Code wa 2FA udi mulombeka",
     "otpLabel": "Code wa bimba 6",
     "otpButton": "Itaba",

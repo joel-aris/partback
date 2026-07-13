@@ -62,7 +62,7 @@
     "registerButton": "Creer mon compte",
     "haveAccount": "Vous avez deja un compte ?",
     "loginLink": "Se connecter",
-    "passwordHint": "8 caracteres minimum",
+    "passwordHint": "12 caracteres minimum, avec majuscule, minuscule, chiffre et symbole",
     "otpRequired": "Code de double authentification requis",
     "otpLabel": "Code a 6 chiffres",
     "otpButton": "Valider",

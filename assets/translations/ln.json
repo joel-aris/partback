@@ -62,7 +62,7 @@
     "registerButton": "Kosala compte na ngai",
     "haveAccount": "Ozali na compte?",
     "loginLink": "Kokota",
-    "passwordHint": "Nkoma 8 na se moke",
+    "passwordHint": "Nkoma 12 na se moke, na majuscule, minuscule, chiffre mpe symbole",
     "otpRequired": "Code ya sécurité (2FA) esengelami",
     "otpLabel": "Code ya chiffre 6",
     "otpButton": "Kondima",

@@ -13,11 +13,18 @@ class CryptoProofCard extends StatefulWidget {
     required this.proof,
     this.verificationHash,
     this.signature,
+    this.overallValid,
   });
 
   final CryptographicProof proof;
   final String? verificationHash;
   final String? signature;
+
+  /// Overrides `proof.valid` for the header badge. Needed for documents,
+  /// whose `cryptographic_proof` doesn't carry a `valid` field of its own —
+  /// the caller passes the verification result's own top-level `valid`
+  /// instead (see `verify_result_screen.dart`).
+  final bool? overallValid;
 
   @override
   State<CryptoProofCard> createState() => _CryptoProofCardState();
@@ -30,7 +37,8 @@ class _CryptoProofCardState extends State<CryptoProofCard> {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final proof = widget.proof;
-    final validColor = proof.valid ? const Color(0xFF1A7F37) : theme.colorScheme.error;
+    final isValid = widget.overallValid ?? proof.valid ?? false;
+    final validColor = isValid ? const Color(0xFF1A7F37) : theme.colorScheme.error;
 
     return Card(
       child: Padding(
@@ -41,7 +49,7 @@ class _CryptoProofCardState extends State<CryptoProofCard> {
             Row(
               children: [
                 Icon(
-                  proof.valid ? Icons.verified_rounded : Icons.gpp_bad_rounded,
+                  isValid ? Icons.verified_rounded : Icons.gpp_bad_rounded,
                   color: validColor,
                 ),
                 const SizedBox(width: 8),
@@ -58,7 +66,7 @@ class _CryptoProofCardState extends State<CryptoProofCard> {
                     borderRadius: BorderRadius.circular(999),
                   ),
                   child: Text(
-                    proof.valid ? 'pharmacist.proofValid'.tr() : 'pharmacist.proofInvalid'.tr(),
+                    isValid ? 'pharmacist.proofValid'.tr() : 'pharmacist.proofInvalid'.tr(),
                     style: theme.textTheme.labelMedium?.copyWith(color: validColor, fontWeight: FontWeight.w600),
                   ),
                 ),
@@ -88,7 +96,8 @@ class _CryptoProofCardState extends State<CryptoProofCard> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const SizedBox(height: 4),
-                  _DetailLine(label: 'pharmacist.merkleNodes'.tr(), value: '${proof.merkleProofNodes}'),
+                  if (proof.merkleProofNodes != null)
+                    _DetailLine(label: 'pharmacist.merkleNodes'.tr(), value: '${proof.merkleProofNodes}'),
                   if (proof.proofVersion != null)
                     _DetailLine(label: 'pharmacist.proofVersion'.tr(), value: proof.proofVersion!),
                   if (proof.verifiedAt != null)
@@ -115,7 +124,11 @@ class _ProofRow extends StatelessWidget {
 
   final String label;
   final String? value;
-  final bool valid;
+
+  /// null means the API didn't provide this indicator (e.g. document
+  /// proofs don't carry hash/signature/Merkle validity) — shown as a
+  /// neutral dash, never as a false "invalid" cross.
+  final bool? valid;
 
   String _abbreviate(String value) {
     if (value.length <= 18) return value;
@@ -126,16 +139,17 @@ class _ProofRow extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final displayValue = value;
+    final neutralColor = theme.colorScheme.onSurface.withValues(alpha: 0.4);
+    final icon = valid == null
+        ? Icons.remove_circle_outline_rounded
+        : (valid! ? Icons.check_circle_rounded : Icons.cancel_rounded);
+    final color = valid == null ? neutralColor : (valid! ? const Color(0xFF1A7F37) : theme.colorScheme.error);
 
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 4),
       child: Row(
         children: [
-          Icon(
-            valid ? Icons.check_circle_rounded : Icons.cancel_rounded,
-            size: 16,
-            color: valid ? const Color(0xFF1A7F37) : theme.colorScheme.error,
-          ),
+          Icon(icon, size: 16, color: color),
           const SizedBox(width: 8),
           Expanded(
             child: Column(

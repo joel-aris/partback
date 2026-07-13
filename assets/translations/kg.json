@@ -62,7 +62,7 @@
     "registerButton": "Sala compte na mono",
     "haveAccount": "Nge kele na compte?",
     "loginLink": "Kota",
-    "passwordHint": "Bisono 8 na se fioti",
+    "passwordHint": "Bisono 12 na se fioti, na majuscule, minuscule, chiffre mpe symbole",
     "otpRequired": "Code ya 2FA ke lombama",
     "otpLabel": "Code ya bisiku 6",
     "otpButton": "Ndima",

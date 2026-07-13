@@ -98,7 +98,7 @@ class _ResultBody extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 16),
-          CryptoProofCard(proof: proof),
+          CryptoProofCard(proof: proof, overallValid: valid),
         ],
       ),
       VerifyNotFound(:final message) => Center(

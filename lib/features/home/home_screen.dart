@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -111,10 +113,42 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   }
 }
 
-class _HeroBanner extends StatelessWidget {
+const _heroImages = [
+  'assets/images/pharmacists/pharma1.jpg',
+  'assets/images/pharmacists/pharma3.jpg',
+  'assets/images/pharmacists/pharma5.jpg',
+];
+
+class _HeroBanner extends StatefulWidget {
   const _HeroBanner({required this.isDark});
 
   final bool isDark;
+
+  @override
+  State<_HeroBanner> createState() => _HeroBannerState();
+}
+
+class _HeroBannerState extends State<_HeroBanner> {
+  final _pageController = PageController();
+  Timer? _timer;
+  int _page = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    _timer = Timer.periodic(const Duration(seconds: 4), (_) {
+      if (!_pageController.hasClients) return;
+      final next = (_page + 1) % _heroImages.length;
+      _pageController.animateToPage(next, duration: const Duration(milliseconds: 500), curve: Curves.easeInOut);
+    });
+  }
+
+  @override
+  void dispose() {
+    _timer?.cancel();
+    _pageController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -125,7 +159,12 @@ class _HeroBanner extends StatelessWidget {
         child: Stack(
           fit: StackFit.expand,
           children: [
-            Image.asset('assets/images/pharmacists/pharma1.jpg', fit: BoxFit.cover),
+            PageView.builder(
+              controller: _pageController,
+              itemCount: _heroImages.length,
+              onPageChanged: (index) => setState(() => _page = index),
+              itemBuilder: (context, index) => Image.asset(_heroImages[index], fit: BoxFit.cover),
+            ),
             DecoratedBox(
               decoration: BoxDecoration(
                 gradient: LinearGradient(
@@ -139,15 +178,37 @@ class _HeroBanner extends StatelessWidget {
               left: 18,
               right: 18,
               bottom: 18,
-              child: Row(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
                 children: [
-                  const Icon(Icons.verified_rounded, color: Colors.white, size: 20),
-                  const SizedBox(width: 8),
-                  Expanded(
-                    child: Text(
-                      'app.tagline'.tr(),
-                      style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 14),
-                    ),
+                  Row(
+                    children: [
+                      const Icon(Icons.verified_rounded, color: Colors.white, size: 20),
+                      const SizedBox(width: 8),
+                      Expanded(
+                        child: Text(
+                          'app.tagline'.tr(),
+                          style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 14),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 12),
+                  Row(
+                    children: List.generate(_heroImages.length, (index) {
+                      final active = index == _page;
+                      return AnimatedContainer(
+                        duration: const Duration(milliseconds: 250),
+                        margin: const EdgeInsets.only(right: 6),
+                        width: active ? 18 : 6,
+                        height: 6,
+                        decoration: BoxDecoration(
+                          color: Colors.white.withValues(alpha: active ? 0.95 : 0.5),
+                          borderRadius: BorderRadius.circular(3),
+                        ),
+                      );
+                    }),
                   ),
                 ],
               ),

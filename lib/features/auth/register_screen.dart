@@ -6,6 +6,17 @@ import 'package:go_router/go_router.dart';
 import '../../core/api/api_exception.dart';
 import 'auth_controller.dart';
 
+// Mirrors the backend policy (Password::min(12)->mixedCase()->numbers()->symbols()
+// in RegisterRequest) so the form catches weak passwords before the API round-trip.
+bool _validatePassword(String? value) {
+  if (value == null || value.length < 12) return false;
+  final hasUpper = value.contains(RegExp(r'[A-Z]'));
+  final hasLower = value.contains(RegExp(r'[a-z]'));
+  final hasDigit = value.contains(RegExp(r'[0-9]'));
+  final hasSymbol = value.contains(RegExp(r'[^A-Za-z0-9]'));
+  return hasUpper && hasLower && hasDigit && hasSymbol;
+}
+
 class RegisterScreen extends ConsumerStatefulWidget {
   const RegisterScreen({super.key});
 
@@ -105,7 +116,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                       obscureText: true,
                       autofillHints: const [AutofillHints.newPassword],
                       decoration: InputDecoration(labelText: 'auth.password'.tr(), helperText: 'auth.passwordHint'.tr()),
-                      validator: (value) => (value == null || value.length < 8) ? 'auth.passwordHint'.tr() : null,
+                      validator: (value) => _validatePassword(value) ? null : 'auth.passwordHint'.tr(),
                     ),
                     const SizedBox(height: 14),
                     TextFormField(

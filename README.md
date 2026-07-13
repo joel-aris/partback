@@ -1,6 +1,6 @@
 # VALIDIKA Mobile
 
-Application mobile Flutter pour VALIDIKA (verification publique des pharmaciens en RDC). Phase 1 (MVP public) : accueil, recherche de pharmaciens, fiche pharmacien avec preuve cryptographique, verification par QR (saisie manuelle ou scan camera), connexion, inscription, verification email, mon compte.
+Application mobile Flutter pour VALIDIKA (verification publique des pharmaciens en RDC). Phase 1 (MVP public) : accueil, recherche de pharmaciens, fiche pharmacien avec preuve cryptographique, verification par QR (saisie manuelle ou scan camera), connexion, inscription, verification email, mon compte, depot de candidature (avec scan OCR pour pre-remplir nom/prenom).
 
 ## Installation
 
@@ -11,18 +11,20 @@ flutter pub get
 
 ## Lancer l'application
 
-Par defaut l'app pointe vers `http://127.0.0.1:8002/api/v1` (serveur Laravel local, `php artisan serve` avec le port configure dans `backend/.env`). Redefinir l'URL au lancement avec `--dart-define` :
+Par defaut l'app pointe vers l'API de production sur le VPS (`http://72.62.1.143/api/v1`, voir `lib/core/api/api_client.dart`). Redefinir l'URL au lancement avec `--dart-define`, notamment pour developper contre un backend local :
 
 ```bash
-# Emulateur Android (127.0.0.1 de la machine hote = 10.0.2.2 dans l'emulateur)
+# Backend Laravel local (php artisan serve, port configure dans backend/.env)
+flutter run --dart-define=API_BASE_URL=http://127.0.0.1:8002/api/v1
+
+# Emulateur Android contre un backend local (127.0.0.1 de la machine hote = 10.0.2.2 dans l'emulateur)
 flutter run --dart-define=API_BASE_URL=http://10.0.2.2:8002/api/v1
 
-# Appareil physique / build de production
-flutter run --dart-define=API_BASE_URL=https://api.validika.cd/api/v1
-
 # Desktop Linux (meme reseau que le serveur local)
-flutter run -d linux
+flutter run -d linux --dart-define=API_BASE_URL=http://127.0.0.1:8002/api/v1
 ```
+
+L'API de production tourne encore en HTTP simple (pas de nom de domaine/certificat TLS pour l'instant) : `android/app/src/main/res/xml/network_security_config.xml` autorise explicitement le trafic en clair vers `72.62.1.143` uniquement, sinon Android bloque tout appel reseau sur les builds release/profile. A retirer une fois l'API servie en HTTPS.
 
 Pour tester rapidement sans device/emulateur (Android/iOS non disponibles dans certains environnements), un build web fonctionne aussi :
 
@@ -48,4 +50,5 @@ flutter test
 - Les erreurs API sont toujours affichees telles que renvoyees par le backend (jamais de "Request failed with status code X"), voir `lib/core/api/api_exception.dart`.
 - Le scan de QR code (`mobile_scanner`) fonctionne sur Android/iOS/web ; non teste sur desktop Linux dans cet environnement (pas de webcam/emulateur disponible). A valider sur un appareil reel avant mise en production.
 - Traductions (`assets/translations/`) : francais et anglais relus avec attention ; lingala et swahili en confiance moyenne ; kikongo et tshiluba sont des premieres versions a faire relire par un locuteur natif avant publication.
-- Portee de cette session (Phase 1 uniquement) : le depot de candidature affiche un ecran "bientot disponible" (`/candidacy`) — la soumission complete avec upload de documents est prevue en Phase 2, avec le suivi des candidatures deja affiche dans "Mon compte" (l'endpoint `GET /auth/candidacies` existe cote backend).
+- Le depot de candidature (`/candidacy`) est fonctionnel : formulaire complet, upload CV/lettre de motivation, et scan OCR optionnel pour pre-remplir nom/prenom depuis une photo de carte professionnelle/diplome/piece d'identite. Le suivi des candidatures est affiche dans "Mon compte" via `GET /auth/candidacies`.
+- Le scan OCR (`/ocr/extract`) exige un token d'authentification cote backend, alors que le depot de candidature est concu comme un flux public (sans connexion). Un candidat non connecte qui utilise le bouton "Scanner un document" recevra donc une erreur d'autorisation au lieu d'un pre-remplissage — a trancher avec l'equipe backend (rendre `/ocr/extract` accessible sans connexion pour ce flux, ou exiger une connexion prealable avant de proposer le scan).

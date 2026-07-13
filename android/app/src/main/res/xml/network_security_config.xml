@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  The VALIDIKA API is currently served over plain HTTP from the VPS
+  (72.62.1.143, no domain/TLS certificate yet). Android blocks cleartext
+  traffic by default in release/profile builds (targetSdk 28+), which made
+  every API call fail on a real device with a connection error. This scopes
+  the cleartext exception to just that one host instead of the whole app.
+  Once the backend is served over HTTPS, this file (and the manifest
+  reference to it) should be removed.
+-->
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="false">72.62.1.143</domain>
+    </domain-config>
+</network-security-config>
