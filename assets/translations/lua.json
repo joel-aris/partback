@@ -63,6 +63,8 @@
     "haveAccount": "Udi ne compte?",
     "loginLink": "Bwela",
     "passwordHint": "Miaku 12 pa kabuipi, ne majuscule, minuscule, chiffre ne symbole",
+    "showPassword": "Leja mot de passe",
+    "hidePassword": "Sokoka mot de passe",
     "otpRequired": "Code wa 2FA udi mulombeka",
     "otpLabel": "Code wa bimba 6",
     "otpButton": "Itaba",

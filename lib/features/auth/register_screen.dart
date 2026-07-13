@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../core/api/api_exception.dart';
+import '../../core/widgets/password_field.dart';
 import 'auth_controller.dart';
 
 // Mirrors the backend policy (Password::min(12)->mixedCase()->numbers()->symbols()
@@ -111,18 +112,17 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                       },
                     ),
                     const SizedBox(height: 14),
-                    TextFormField(
+                    PasswordField(
                       controller: _passwordController,
-                      obscureText: true,
                       autofillHints: const [AutofillHints.newPassword],
-                      decoration: InputDecoration(labelText: 'auth.password'.tr(), helperText: 'auth.passwordHint'.tr()),
+                      labelText: 'auth.password'.tr(),
+                      helperText: 'auth.passwordHint'.tr(),
                       validator: (value) => _validatePassword(value) ? null : 'auth.passwordHint'.tr(),
                     ),
                     const SizedBox(height: 14),
-                    TextFormField(
+                    PasswordField(
                       controller: _confirmController,
-                      obscureText: true,
-                      decoration: InputDecoration(labelText: 'auth.confirmPassword'.tr()),
+                      labelText: 'auth.confirmPassword'.tr(),
                       validator: (value) => value != _passwordController.text ? 'auth.confirmPassword'.tr() : null,
                     ),
                     if (_errorMessage != null) ...[

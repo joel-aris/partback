@@ -63,6 +63,8 @@
     "haveAccount": "Nge kele na compte?",
     "loginLink": "Kota",
     "passwordHint": "Bisono 12 na se fioti, na majuscule, minuscule, chiffre mpe symbole",
+    "showPassword": "Monisa mot de passe",
+    "hidePassword": "Bumba mot de passe",
     "otpRequired": "Code ya 2FA ke lombama",
     "otpLabel": "Code ya bisiku 6",
     "otpButton": "Ndima",

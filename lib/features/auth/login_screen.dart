@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../core/api/api_exception.dart';
+import '../../core/widgets/password_field.dart';
 import 'auth_controller.dart';
 import 'auth_repository.dart';
 
@@ -110,12 +111,11 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                       },
                     ),
                     const SizedBox(height: 14),
-                    TextFormField(
+                    PasswordField(
                       controller: _passwordController,
                       enabled: !_awaitingOtp,
-                      obscureText: true,
                       autofillHints: const [AutofillHints.password],
-                      decoration: InputDecoration(labelText: 'auth.password'.tr()),
+                      labelText: 'auth.password'.tr(),
                       validator: (value) => (value == null || value.length < 8) ? 'auth.passwordHint'.tr() : null,
                     ),
                     if (_awaitingOtp) ...[

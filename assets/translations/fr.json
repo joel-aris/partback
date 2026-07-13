@@ -63,6 +63,8 @@
     "haveAccount": "Vous avez deja un compte ?",
     "loginLink": "Se connecter",
     "passwordHint": "12 caracteres minimum, avec majuscule, minuscule, chiffre et symbole",
+    "showPassword": "Afficher le mot de passe",
+    "hidePassword": "Masquer le mot de passe",
     "otpRequired": "Code de double authentification requis",
     "otpLabel": "Code a 6 chiffres",
     "otpButton": "Valider",

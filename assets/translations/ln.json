@@ -63,6 +63,8 @@
     "haveAccount": "Ozali na compte?",
     "loginLink": "Kokota",
     "passwordHint": "Nkoma 12 na se moke, na majuscule, minuscule, chiffre mpe symbole",
+    "showPassword": "Komonisa mot de passe",
+    "hidePassword": "Kobomba mot de passe",
     "otpRequired": "Code ya sécurité (2FA) esengelami",
     "otpLabel": "Code ya chiffre 6",
     "otpButton": "Kondima",
