@@ -2,6 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import 'core/localization/fallback_localizations.dart';
 import 'core/router/app_router.dart';
 import 'core/theme/app_theme.dart';
 import 'core/theme/theme_controller.dart';
@@ -41,7 +42,18 @@ class ValidikaApp extends ConsumerWidget {
       key: ValueKey(context.locale),
       title: 'VALIDIKA',
       debugShowCheckedModeBanner: false,
-      localizationsDelegates: context.localizationDelegates,
+      // context.localizationDelegates is [easy_localization's own delegate,
+      // GlobalMaterialLocalizations.delegate, GlobalWidgetsLocalizations.delegate,
+      // GlobalCupertinoLocalizations.delegate]. Swap the last three for
+      // wrappers that fall back to French instead of throwing "No
+      // MaterialLocalizations found" for locales Flutter itself doesn't
+      // ship translations for (ln, kg, lua) -- see fallback_localizations.dart.
+      localizationsDelegates: [
+        context.localizationDelegates.first,
+        const FallbackMaterialLocalizationsDelegate(),
+        const FallbackWidgetsLocalizationsDelegate(),
+        const FallbackCupertinoLocalizationsDelegate(),
+      ],
       supportedLocales: context.supportedLocales,
       locale: context.locale,
       theme: AppTheme.light(),
